@@ -1,0 +1,40 @@
+services:
+  web:
+    build: ./userfacing
+    networks:
+        - internal
+    environment:
+        - DATABASE_URL=postgres://uowbo:${POSTGRES_PASSWORD}@db:5432/uowbo
+        - BOT_HOST=${BOT_HOST}
+        - SECRET=${SECRET}
+        - SMTP_HOST=${SMTP_HOST}
+        - SMTP_PORT=${SMTP_PORT}
+        - SMTP_USER=${SMTP_USER}
+        - SMTP_PASSWORD=${SMTP_PASSWORD}
+    container_name: userfacing
+    hostname: userfacing
+    restart: always
+  db:
+    image: postgres
+    networks:
+      - internal
+    environment:
+      POSTGRES_DB: uowbo
+      POSTGRES_USER: uowbo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    restart: always
+  bot:
+    build: ./bot
+    networks:
+      - internal
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - DISCORD_APP_ID=${DISCORD_APP_ID}
+      - ROLE_ID=${ROLE_ID}
+      - API_HOST=${API_HOST}
+      - BOT_PORT=${BOT_PORT}
+      - SECRET=${SECRET}
+
+
+networks:
+  internal:
