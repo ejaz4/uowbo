@@ -1,0 +1,6 @@
+[submodule "userfacing"]
+	path = userfacing
+	url = https://github.com/ejaz4/uowbo-userfacing
+[submodule "bot"]
+	path = bot
+	url = https://github.com/ejaz4/uowbo-verify
