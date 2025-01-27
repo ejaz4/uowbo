@@ -13,7 +13,7 @@ services:
         - SMTP_PASSWORD=${SMTP_PASSWORD}
     restart: always
   uowbodb:
-    image: postgres
+    image: postgres:16
     networks:
       - internal
     environment:
