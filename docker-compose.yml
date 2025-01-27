@@ -32,6 +32,7 @@ services:
       - API_HOST=${API_HOST}
       - BOT_PORT=${BOT_PORT}
       - SECRET=${SECRET}
+    restart: always
 
 
 networks:
