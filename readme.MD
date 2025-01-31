@@ -21,7 +21,8 @@ uowbo! is constantly expanding and gaining more features every few weeks to help
 
 - ✅ Students can verify themselves using their university email address
 - ✅ Students can verify themselves using their university ID card
-- 💤 Multiple servers can use the same uowbo! instance at the same time
+- ✅ Externals can verify themselves
+- ✅ Multiple servers can use the same uowbo! instance at the same time
 
 
 ## Development
