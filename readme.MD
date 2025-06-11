@@ -36,7 +36,9 @@ If you want to aid development of uowbo! by contributing, follow these steps to 
 ### Setting up the repository
 In your terminal, clone the repository using:
 
-```git clone https://github.com/ejaz4/uowbo```
+```
+git clone https://github.com/ejaz4/uowbo
+```
 
 This will pull the latest source of uowbo and two submodules, these submodules might not usually be pinned to the latest commit of their repository. As you are developing, `cd` into whichever submodule you want to work on, create a new branch using the name scheme: `type/description`.
 
